@@ -53,10 +53,9 @@ public class Start extends Application
     	loader.setLocation(getClass().getResource("../ui/MainWindow.fxml"));    	
     	Parent root = loader.load();
 
- //		TODO předání hry kontroleru
-//    	HomeController controller = loader.getController();
-//    	IHra hra = new Hra();
-//		controller.inicializuj(hra);
+    	HomeController controller = loader.getController();
+    	IHra hra = new Hra();
+		controller.inicializuj(hra);
     	
     	primaryStage.setScene(new Scene(root));
     	primaryStage.show();
